@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+      body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* style the container */
+/* .container {
+  position: relative;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px 0 30px 0;
+}  */
+
+/* add appropriate colors to fb, twitter and google buttons */
+.fb {
+  background-color: #3B5998;
+  color: white;
+  width: 80%;
+  padding: 12px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; 
+}
+.twitter {
+  background-color: #55ACEE;
+  color: white;
+}
+
+.google {
+  background-color: #dd4b39;
+  color: white;
+}
+/* Two-column layout */
+.col {
+  float: left;
+  width: 400px;
+  padding: 0 50px;
+  
+}
+
+/* Clear floats after the columns */
+.row:after {
+  display: table;
+  clear: both;
+}
+
+/* vertical line */
+.vl {
+  position: absolute;
+  left: 25%;
+  transform: translate(-50%);
+  border: 1px solid rgb(37, 172, 217);
+  height: 350px;
+}
+
+/* text inside the vertical line */
+.vl-innertext {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 8px 10px;
+}
+
+/* hide some text on medium and large screens */
+.hide-md-lg {
+  display: none;
+}
+
+
+/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 650px) {
+  .col {
+    width: 100%;
+    margin-top: 0;
+  }
+  /* hide the vertical line */
+  .vl {
+    display: none;
+  }
+  /* show the hidden text on small screens */
+  .hide-md-lg {
+    display: block;
+    text-align: center;
+  }
+}
+    </style>
+</head>
+<body>
+    <div style="margin: 100px 100px 0px 100px;">
+        <div class="row">
+          <div class="col-sm-4" style="background-image: url(http://moonrisehotel.com/wp-content/uploads/2014/07/moon-landing.jpg); background-repeat: no-repeat;background-size: cover;  height: 800px;filter: brightness(0.5);">
+            <img src="https://media-exp2.licdn.com/dms/image/C4E0BAQGyS438JyidrA/company-logo_200_200/0/1634733203008?e=2147483647&v=beta&t=ehHw4niymw7sHAFwoLoxJAA3hTIUa2rcg_sx5gUtSWw" style="width: 100px; height: 100px; border-radius: 30px; margin-left: 210px; margin-top: 60px;">
+
+            <h1 style="text-align: center; color: white;">Hey you!</h1>
+            <p style="text-align: center; color: aliceblue;">You feel lost?</p><br><br><br>
+            <p style="text-align:center; color: antiquewhite;">
+            The pain itself is important to the main adipisicing elite, but I give<br>
+            The pain itself is important to the main adipisicing elite, but I give<br>
+            The pain itself is important to the main adipisicing elite, but I give<br>
+            The pain itself is important to the main adipisicing elite, but I give</p>
+            <br><br><br>
+
+            <input type="radio" style="margin-left: 50px;">
+            <label style="padding-left: 10px; color: beige;">Bullet point</label>
+            <br><br><br>
+
+            <input type="radio"  style="margin-left: 50px;">
+            <label style="padding-left: 10px; color: beige;">Bullet point 2</label>
+            <br><br><br>
+
+            <input type="radio"  style="margin-left: 50px;">
+            <label style="padding-left: 10px; color: beige;">Bullet point 3</label>
+
+          </div>
+          <div class="col-sm-7" style="background-color:lavenderblush; height: 800px;">
+            <div class="container">
+              <form action="/action_page.php">
+                <div class="row">
+                  <h2 style="text-align:center"></h2>
+                  
+            
+                  <div class="col">
+                    <p style="font-size: 20px; padding-top: 30px;">login/sign up</p>
+                    <br><br><br><br>
+                    <p style="font-size: 20px;">Will Be Need....</p>
+                    <br><br><br>
+                    <a href="#" class=" btn" style="padding: 0 5px; border-bottom: 2px solid black; border-radius: 0;">Your name
+                      <i class="far fa-smile" style="padding-left: 150px; font-size: 30px;"></i>
+                     </a><br><br><br>
+                     <a href="#" class=" btn" style="padding: 0 5px; border-bottom: 2px solid black; border-radius: 0; ">Your mail address
+                      <i class="far fa-envelope" style="padding-left: 105px;  font-size: 30px;"></i>
+                     </a><br><br><br>
+                     <a href="#" class=" btn" style="padding: 0 5px; border-bottom: 2px solid black; border-radius: 0;">Your password
+                      <i  class="fa-solid fa-lock" style="padding-left: 125px;  font-size: 30px;"></i>
+                     </a><br><br><br>
+                     <a href="#" class=" btn" style="padding: 0 5px; border-bottom: 2px solid black; border-radius: 0;">One more time?
+                      <i class="fa-solid fa-lock-open" style="padding-left: 115px;  font-size: 30px;"></i>
+                     </a>
+                  </div>
+
+                  <div class="vl" style="margin-left: 200px; margin-top: 150px;">
+                    <span class="vl-innertext">or</span>
+                  </div>
+            
+                  <div class="col">
+                   <p style="font-size: 25px; padding-left: 90px; padding-top: 150px;">Also you can..</p>
+            
+                    <a href="#" class="fb btn" style="margin-left: 85px; margin-top: 120px; padding-top: 5px;">Login with Facebook
+                      <i class="fa-brands fa-facebook" style="padding-left: 35px; font-size: 30px;"></i>
+                     </a>
+                  </div>
+                  
+                  
+                </div>
+              </form>
+              <button style="margin-left: 300px; margin-top: 100px; padding: 10px 40px 10px 40px; font-size: 20px; border-color: rgb(37, 172, 217);border-radius: 10px;">Get to the questionaire</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+</body>
+</html>

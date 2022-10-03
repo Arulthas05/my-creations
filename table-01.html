@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .u {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #dddddd;
+}
+
+.l {
+  float: left;
+}
+
+li a {
+  display: block;
+  padding: 8px;
+}
+
+.d{
+    display: none;
+  box-shadow: 0px 8px 16px;
+  padding: 12px 16px;
+}
+.hi:hover .d {
+  display: block;
+}
+
+body{
+    animation: color 9s infinite linear;
+    
+}
+@keyframes color {
+    0%{ background: maroon;}
+    20%{ background: rgb(70,0,0);}
+    40%{ background: green;}
+    60%{ background: red;}
+    80%{ background: blue;}
+    100%{ background: maroon;}
+}
+.text{
+    animation: text 9s infinite linear;
+    font-size: 200px;
+    text-shadow: 0 0 10px white, 0 0 5px rgb(29,24,24);
+}
+@keyframes text {
+    0%{ color: rgb(239, 239, 44);}
+    20%{ color: rgb(176, 21, 21);}
+    40%{ color: rgb(128, 0, 113);}
+    60%{ color: rgb(198, 79, 172);}
+    80%{ color: rgb(21, 21, 47);}
+    100%{ color: rgb(0, 94, 128);}
+}
+
+.loading span{
+    display: inline-block;
+    font-size: 90px;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i));
+}
+@keyframes flip{
+    0%,80%{
+        transform: rotateY(360deg);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- table -->
+    <table border="2">
+        <tr>
+            <th>name</th>
+            <th>age</th>
+            <th>address</th>
+        </tr>
+        <tr>
+            <td>arul</td>
+            <td>28</td>
+            <td>asdfghjk</td>
+            
+        </tr>
+        <tr>
+            <td>&nbsp</td>
+            <td>&nbsp</td>
+            <td>&nbsp</td>
+            
+        </tr>
+        <tr>
+            <td>&nbsp</td>
+            <td>&nbsp</td>
+            <td>&nbsp</td>
+            
+        </tr>
+    </table>
+
+    <!-- list -->
+    <h1>ul</h1>
+    <ul type="none">
+        <li>copy</li>
+        <li>tea</li>
+    </ul>
+    <ul type="circle">
+        <li>copy</li>
+        <li>tea</li>
+    </ul>
+    <ul type="square">
+        <li>copy</li>
+        <li>tea</li>
+    </ul>
+    <h1>ol</h1>
+    <ol type="1">
+        <li>tea</li>
+    </ol>
+    <ol type="i">
+        <li>tea</li>
+    </ol>
+    <ol type="A">
+        <li>tea</li>
+    </ol>
+    <ol type="a">
+        <li>tea</li>
+    </ol>
+    <ol type="1">
+        <li>tea</li>
+    </ol>
+    <h1>dl</h1>
+    <dl>
+        <dt>uki</dt>
+        <dd>-students</dd>
+    </dl>
+    <h1>icon</h1>
+
+    <i class="fa-solid fa-face-grin-hearts" ></i>
+    <i class="fa-brands fa-whatsapp"></i>
+
+   <h1>navbar</h1>
+   <ul class="u">
+    <li class="l"><a href="#home">Home</a></li>
+    <li class="l"><a href="#news">News</a></li>
+    <li class="l"><a href="#news">News</a></li>
+    <li class="l"><a href="#contact">Contact</a></li>
+    <li class="l"><a href="#about">About</a></li>
+  </ul>
+
+  <!-- dropdowns -->
+ <h1> dropdowns</h1> 
+
+ <div class="hi">
+     <button>hi uki</button>
+     <div class="d">
+         <p>i am arulthas</p>
+     </div>
+ </div><br>
+ <br><b></b>
+
+ <!-- animation -->
+
+ <h1 class="text">Arulthas</h1>
+
+ <div class="loading">
+     <span style="--i:1">L</span>
+     <span style="--i:2">O</span>
+     <span style="--i:3">A</span>
+     <span style="--i:4">D</span>
+     <span style="--i:5">I</span>
+     <span style="--i:6">N</span>
+     <span style="--i:7">G</span>
+     <span style="--i:8">.</span>
+
+ </div>
+
+ <script>
+     //polimorphisam
+     class Animal{
+             constructor(name){
+            this.name=name;
+        }
+
+        eats(){
+        console.log(this.name+` eats food`)
+        }
+
+        }
+        class dog extends Animal{
+
+        eats(){
+        super.eats();
+        console.log(this.name+` eats fishes `) 
+        }
+ 
+        }
+        let animal= new Animal (`cat`)
+        animal.eats()
+
+
+        //Inheritance
+        class vechicle {
+            gear;
+            speed;
+            constructor(gear, speed) {
+                this.gear = gear;
+                this.speed = speed;
+            }
+            dispaly1() {
+                return `No of gear=${this.gear} speed=${this.speed}`;
+            };
+
+        }
+        class BMW extends vechicle {
+            wheels;
+            constructor(gear, speed, wheels) {
+                super(gear, speed);
+                this.wheels = wheels;
+
+
+            }
+            dispaly2() {
+                return `${super.dispaly1()} No of wheels=${this.wheels}`;
+            }
+        }
+
+        //Abstraction
+         function employee(id,name,salery) {
+            this.id=id;
+            this.name=name;
+            this.salery=salery;
+
+            let overtime=5000;
+            let ingreement=1500;
+
+            let totalsalery=function(){
+                let cal=overtime+ingreement+salery;
+                console.log("Total Salert is ="+cal)
+            }
+
+            this.getData=function(){
+                console.log("ID -"+this.id, "\nName -"+this.name, "\nMonthly Salery -"+this.salery);
+                totalsalery();
+            }
+        }
+
+        let employee01=new employee(1001,"Raj",25000);
+        employee01.getData();
+
+        let employee02=new employee(1002,"sham",20000);
+        employee02.getData();
+
+         
+ </script>
+
+    
+    
+    
+</body>
+</html>

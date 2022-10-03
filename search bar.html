@@ -1,0 +1,271 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/bdd89edb33.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Video</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background: #eeb5ac; */
+  background: linear-gradient(to top left, #f321d7, #ffec61);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.headline h1 {
+  margin: 0;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.home {
+  width: 50%;
+  height: 3rem;
+  margin: 10px 0;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background: #fff;
+  color: #868686;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  transform: translatey(-50%);
+  font-size: 18px;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  width: 80%;
+}
+
+/* .text-content {
+  /* padding-inline-start: 48px;
+  bottom: 0;
+  color: rgb(117, 117, 117);
+  font-size: 16px;
+  height: 44px;
+  left: 0;
+  line-height: 44px;
+  margin: auto 0;
+  overflow: hidden;
+  position: absolute;
+  right: 44px;
+  text-align: initial;
+  text-overflow: ellipsis;
+  top: 0;
+  user-select: none;
+  vertical-align: middle;
+  visibility: inherit;
+  white-space: nowrap; */
+/* } */
+
+.home .hero-content .text-content h1 {
+  text-transform: uppercase;
+}
+
+.laptop {
+  width: 80%;
+  max-width: 1200px;
+  position: relative;
+}
+
+.laptop img {
+  width: 100%;
+}
+
+.laptop video {
+  position: absolute;
+  width: 67.7%;
+  height: 81.3%;
+  background: #000;
+  top: 7.1%;
+  left: 17.5%;
+}
+
+.bottom-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-line h1 {
+  margin: 1rem 0 0;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.bottom-line a {
+  margin: 0;
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .headline h1 {
+    padding: 0 1.5rem;
+  }
+  .home {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .headline h1 {
+    padding: 0 1.5rem;
+  }
+  .home {
+    width: 80%;
+  }
+  .home .hero-content .text-content h1 {
+    font-size: 1.5rem;
+  }
+  .bottom-line h1 {
+    text-align: center;
+  }
+}
+@media (max-width: 425px) {
+  .headline h1 {
+    font-size: 2.5rem;
+    padding: 0 1.5rem;
+  }
+  .home {
+    width: 80%;
+  }
+  .hero-content {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    width: 70%;
+    margin-left: 1rem;
+  }
+  .home .hero-content .text-content h1 {
+    font-size: 1.2rem;
+  }
+  .bottom-line h1 {
+    padding: 0 1.5rem;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="headline">
+      <h1>RIGHT NOW 1000's of people are searching for</h1>
+    </div>
+    <div class="home">
+      <div class="search-icon">
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="hero-content">
+        <div class="text-content">
+          <h1>
+            <span
+              class="txt-type"
+              data-wait="2500"
+              data-words='["A Place to eat", "hvac repair", "weight loss", "Auto repair", "hair stylist", "builders", "daycare", "landscaping", "realtor", "photographer"]'
+            ></span>
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-line">
+      <h1>Will they find your business???</h1>
+      <a href="#">Click here to get more customers</a>
+    </div>
+
+    <script>
+        class TypeWriter {
+  constructor(txtElement, words, wait = 3000) {
+    this.txtElement = txtElement;
+    this.words = words;
+    this.txt = "";
+    this.wordIndex = 0;
+    this.wait = parseInt(wait, 7);
+    this.type();
+    this.isDeleting = false;
+  }
+
+  type() {
+    // Current index of word
+    const current = this.wordIndex % this.words.length;
+    // Get full text of current word
+    const fullTxt = this.words[current];
+
+    // Check if deleting
+    if (this.isDeleting) {
+      // Remove char
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+      // Add char
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    // Insert txt into element
+    this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+
+    // Initial Type Speed
+    let typeSpeed = 100;
+
+    if (this.isDeleting) {
+      typeSpeed /= 2;
+    }
+
+    // If word is complete
+    if (!this.isDeleting && this.txt === fullTxt) {
+      // Make pause at end
+      typeSpeed = this.wait;
+      // Set delete to true
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === "") {
+      this.isDeleting = false;
+      // Move to next word
+      this.wordIndex++;
+      // Pause before start typing
+      typeSpeed = 500;
+    }
+
+    setTimeout(() => this.type(), typeSpeed);
+  }
+}
+
+// Init On DOM Load
+document.addEventListener("DOMContentLoaded", init);
+
+// Init App
+function init() {
+  const txtElement = document.querySelector(".txt-type");
+  const words = JSON.parse(txtElement.getAttribute("data-words"));
+  const wait = txtElement.getAttribute("data-wait");
+  // Init TypeWriter
+  new TypeWriter(txtElement, words, wait);
+}
+
+    </script>
+  </body>
+</html>
